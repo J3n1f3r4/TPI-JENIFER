@@ -1,0 +1,388 @@
+/* Asegurar que html y body ocupen toda la altura */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: 1; /* Asegura que no cubra el contenido */
+}
+
+
+/* Cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    background-image: linear-gradient(
+        0deg,
+        rgba(93, 86, 86, 0.323),
+        rgba(62, 59, 59, 0.228)
+    ), url("f9.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+/* Títulos */
+h1 {
+    color: #000000;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 200px;
+    text-align: center;
+    position: relative;
+    
+}
+
+
+.contenido {
+    margin-top: 70px; /* Asegúrate de que el margen superior sea suficiente */
+}
+
+
+h2 {
+    margin-top: 20px;
+    color: #000000;
+    font-size: 28px;
+}
+/* El contenido principal se expande para ocupar espacio disponible */
+#tablaNotas {
+    flex: 1; /* Permite que el contenido crezca y empuje el footer al final */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+}
+
+.tabla-alumno { display: none; } /* Ocultar todas las tablas por defecto */
+
+/* Agregar un margen superior al contenido para no quedar oculto bajo la barra de navegación */
+.contenido {
+    margin-top: 50px; /* Ajusta esto al alto de la barra de navegación */
+}
+/* CSS para el select */
+label {
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+
+}
+
+select {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: 1px solid #4a494968;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    background-color: #00000019;
+}
+
+
+.tabla-alumno { display: none; } /* Ocultar todas las tablas por defecto */
+
+table {/* CSS para las tablas */
+    width: 100%;
+    max-width: 1000%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(247, 16, 16, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    border-color: rgb(173, 176, 176);;
+}
+
+th {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid rgb(173, 176, 176); /* Borde negro para todas las celdas */
+    width: 60%;
+    background-color: #dedbdb;
+    color: #000000;
+    font-weight: bold ;
+    font-size: 10px;
+
+
+}
+td{
+    padding: 12px 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid rgb(173, 176, 176); /* Borde negro para todas las celdas */
+    width: 60%;
+    padding-left: 20px;
+
+}
+
+th {
+    background-color: #dedbdb;
+    color: #000000;
+    font-weight: bold ;
+    font-size: 18px;
+    width: 60%;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #81fd05;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para los campos de entrada */
+input[type="number"] {
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    border: none; /* Sin borde para los inputs */
+    outline:none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Estilo para el menú dropdown */
+.dropdown {
+    position: relative;
+    margin-left: 0; /* Elimina cualquier margen adicional */
+}
+
+/* Estilos de la lista desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Ajusta el dropdown al lado derecho */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Asegurarse de que el botón y los enlaces del menú tengan el mismo estilo */
+.dropdown-content a, .dropdown-content button {
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+}
+
+/* Hover de enlaces y botones */
+.dropdown-content a:hover, .dropdown-content button:hover {
+    background-color: #ddd;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo para el botón de impresión dentro del dropdown */
+.dropdown-content .btn-imprimir-menu {
+    background-color: transparent; /* Igual que los enlaces */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content .btn-imprimir-menu:hover {
+    background-color: #ddd;
+    color: red;
+}
+
+/* Estilo para el botón de sesión */
+.btn-sesion {
+    background-color: #007bff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* Eliminar margen */
+}
+
+/* Estilos del contenedor del logo */
+.container__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: -10px; /* Subir un poco el logo */
+}
+
+/* Logo de la escuela */
+.container__logo img {
+    max-width: 100%;
+    height: auto;
+    width: 80px; /* Hacer el logo un poco más pequeño */
+    margin-right: 10px; /* Ajustar el margen */
+}
+
+/* Nombre de la escuela */
+.school-name {
+    font-size: 16px; /* Reducir el tamaño de la letra */
+    font-weight: bold;
+    color: #000000;
+}
+.contenido {
+    margin-top: 100px; /* O el valor que necesites */
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    background-color: rgb(225, 219, 219); /* Color de fondo */
+    padding: 10px 20px; /* Añade espacio interno alrededor del menú */
+    color: white;
+    max-height: 100px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Asegura que esté alineada a la izquierda */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: space-between; /* Para alinear los elementos al inicio y al final */
+    align-items: center;
+}
+/* Footer pegajoso */
+footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ajusta el contenido en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer form input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+footer form button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background-color: #0056b3;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container__logo img {
+        width: 120px; /* Logo más grande */
+        margin-right: 15px;
+    }
+
+    h1 {
+        text-align: center; /* Centrado del nombre de la escuela */
+        font-size: 32px; /* Tamaño más grande */
+        color: black;
+        display: inline;
+    }
+
+    #tablaNotas {
+        width: 100%;
+        border-collapse: collapse; /* Asegura que los bordes se colapsen para una mejor apariencia */
+    }
+
+    #tablaNotas th, #tablaNotas td {
+        border: 1px solid #000; /* Bordes claros y consistentes */
+        padding: 8px;
+        text-align: center;
+        border-radius: 8px; /* Bordes redondeados para las celdas */
+    }
+
+    #tablaNotas th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    #tablaNotas td {
+        color: black;
+    }
+
+    /* Estilo adicional para los textos del alumno (negrita y mayor tamaño) */
+    p strong {
+        font-weight: bold;
+    }
+
+    .dropdown-content {
+        display: none !important; /* Ocultar el menú desplegable durante la impresión */
+    }
+}

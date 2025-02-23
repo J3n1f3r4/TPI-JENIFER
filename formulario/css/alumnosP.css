@@ -1,0 +1,454 @@
+
+
+/* Estilos del contenedor del logo */
+.container__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: -10px; /* Subir un poco el logo */
+}
+
+/* Logo de la escuela */
+.container__logo img {
+    max-width: 100%;
+    height: auto;
+    width: 80px; /* Hacer el logo un poco más pequeño */
+    margin-right: 10px; /* Ajustar el margen */
+}
+
+/* Nombre de la escuela */
+.school-name {
+    font-size: 16px; /* Reducir el tamaño de la letra */
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    background-color: rgb(225, 219, 219); /* Color de fondo */
+    padding: 15px;
+    color: white;
+    max-height: 100px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Asegura que esté alineada a la izquierda */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: space-between; /* Para alinear los elementos al inicio y al final */
+    align-items: center;
+}
+
+/* Estilos para el contenido principal */
+.contenido {
+    padding: 20px;
+    margin-top: 50px; /* Ajusta esto al alto de la barra de navegación */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Hace que el contenido ocupe todo el alto de la ventana */
+    text-align: center; /* Centra los textos */
+}
+
+/* Contenedor del nombre y curso alineado a la izquierda */
+.contenido .datos-alumno {
+    align-self: flex-start; /* Alinea al contenedor al inicio (izquierda) */
+    text-align: left;
+    width: 100%;
+    padding-left: 20px; /* Asegura un pequeño margen a la izquierda */
+}
+
+/* Tabla de notas */
+#tableNotas {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Celdas de la tabla */
+#tableNotas td {
+    padding: 10px; /* Reducir el tamaño de las celdas */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+}
+
+/* Encabezados de la tabla */
+#tableNotas th {
+    padding: 10px; /* Reducir el tamaño de las celdas */
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    text-align: center;
+    color: #000000;
+    background-color: #d2d0d0;
+}
+
+/* Fila con color gris claro (para las filas de las notas) */
+#tableNotas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableNotas tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+/* Estilo para el menú dropdown */
+.dropdown {
+    position: relative;
+    margin-left: 0; /* Elimina cualquier margen adicional */
+}
+
+/* Estilos de la lista desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Ajusta el dropdown al lado derecho */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Asegurarse de que el botón y los enlaces del menú tengan el mismo estilo */
+.dropdown-content a, .dropdown-content button {
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+}
+
+/* Hover de enlaces y botones */
+.dropdown-content a:hover, .dropdown-content button:hover {
+    background-color: #ddd;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo para el botón de impresión dentro del dropdown */
+.dropdown-content .btn-imprimir-menu {
+    background-color: transparent; /* Igual que los enlaces */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content .btn-imprimir-menu:hover {
+    background-color: #ddd;
+    color: red;
+}
+
+/* Estilo para el botón de sesión */
+.btn-sesion {
+    background-color: #007bff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* Eliminar margen */
+}
+/* Contenedor del contenido */
+.contenido {
+    flex-grow: 1; /* Esto hace que el contenido se estire para ocupar el espacio restante */
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Ajusta esto para que no se sobreponga con la barra de navegación */
+}
+
+/* Asegurarse de que el body y wrapper se estiren correctamente */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Esto asegura que el contenido se expanda */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Asegura que el contenido ocupe toda la altura disponible */
+    flex-grow: 1; /* Permite que el contenedor crezca si el contenido es más grande */
+}
+/* Cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    background-image: linear-gradient(
+        0deg,
+        rgba(93, 86, 86, 0.323),
+        rgba(62, 59, 59, 0.228)
+    ), url("f9.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+/* Títulos */
+h1 {
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+h2 {
+    padding-left: 40px;
+    margin-top: 20px;
+    color: #000000;
+    font-size: 24px;
+}
+
+.usuario-nombre {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(225, 219, 219);
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+/* Botones */
+.btn {
+    margin-top: -40px;
+    background-color: rgb(225, 219, 219);
+    padding: 0px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn:hover {
+    color: #ff0000;
+}
+
+/* Estilo común para ambos botones */
+.btn-menu {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    margin-top: 3px;
+    margin-left: 0; /* Asegura que no haya margen a la izquierda */
+    background-color: #f9f9f9;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.btn-menu:hover {
+    color: #ff0000;
+    font-weight: bold;
+    background-color: #ddd; /* Añadido para que los botones tengan un color más consistente */
+}
+
+/* Estilo para los botones de "Modificar" y "Eliminar" */
+.action-buttons .btn {
+    padding: 8px 16px; /* Reducir el tamaño del padding */
+    border-radius: 5px;
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Estilo específico para el botón de "Modificar" */
+.btn-success {
+    background-color: #28a745; /* Verde para modificar */
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Efecto hover: tono más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
+}
+
+/* Estilo específico para el botón de "Eliminar" */
+.btn-danger {
+    background-color: #dc3545; /* Rojo para eliminar */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Efecto hover: tono más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
+}
+
+/* Efecto general para el hover en cualquier botón */
+.btn:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+/* Para asegurar que los botones estén alineados correctamente */
+.action-buttons {
+    display: flex;
+    gap: 8px; /* Reducir el espacio entre los botones */
+}
+
+/* Contenedor de los botones (Modificar y Eliminar) */
+.btn-container {
+    display: flex;
+    gap: 8px; /* Espacio entre los botones reducido */
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+/* Estilo común para los botones "Modificar" y "Eliminar" */
+a.btn-modificar, a.btn-eliminar {
+    padding: 8px 16px;  /* Reducir el padding */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex; /* Usamos inline-flex para que sea más fácil centrar */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el botón "Modificar" */
+a.btn-modificar {
+    background-color: #28a745; /* Verde */
+}
+
+a.btn-modificar:hover {
+    background-color: #218838; /* Más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Elevación del botón */
+}
+
+/* Estilo para el botón "Eliminar" */
+a.btn-eliminar {
+    background-color: #dc3545; /* Rojo */
+}
+
+a.btn-eliminar:hover {
+    background-color: #c82333; /* Más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Elevación del botón */
+}
+
+/* Sombra para el hover de los botones */
+a.btn-modificar:hover, a.btn-eliminar:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Alineación del contenedor del botón a la izquierda */
+.btn-agregar-nota-container {
+    padding-left: 120px;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Alineación del botón a la izquierda dentro del contenedor */
+.btn-agregar-nota {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    display: inline-block;
+    float: left; /* Alinea el botón a la izquierda */
+}
+
+.btn-agregar-nota:hover {
+    background-color: #45a049;
+}
+
+/* Asegura que el footer esté siempre al final */
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    padding: 20px 0; /* Espaciado interno vertical */
+    margin: 0; /* Elimina márgenes externos */
+    position: relative; /* Asegura que esté dentro del flujo del documento */
+    margin-top: auto; /* Hace que el pie de página se desplace hacia abajo automáticamente */
+}
+footer div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ajusta el contenido en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer form input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+footer form button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background-color: #0056b3;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+

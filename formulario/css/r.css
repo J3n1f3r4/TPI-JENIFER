@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+
+  body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url(f9.png);
+      background-size: cover;
+
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 99vh;/*tamaño que ocupa en la pantalla se modifica segun el dispositivo*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(255, 0, 0, 0),
+        rgba(0, 0, 0, 0.048)
+    )
+    ,url("f9.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    height: 550px;
+    max-width: 900px;
+    transition: all 1s ease;
+    margin: 10px;
+  }
+  
+  .information { /*Color del bolque izquierdo*/
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #b5d1f2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .info-childs {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .info-childs h2 {
+    font-size: 2.5rem;
+    color: #000000e0;
+  }
+  
+  .info-childs p {
+    margin: 15px 0 ;
+    color: #000000;
+  }
+  
+  .info-childs input {
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #4a4848;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #262627;
+    cursor: pointer;
+    transition: background-color .3s ease;
+  }
+  
+  .info-childs input:hover {
+    background-color: #689ef6;/*color del boton con el puntero encima*/
+    border: none;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
+  
+  .form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .form-information-childs {
+    padding: 0 30px;
+  }
+  
+  .form-information-childs h2 {
+    color: #000000;
+    font-size: 2rem;
+  }
+  
+  .form-information-childs p {
+    color: #000000;
+  }
+  
+  .icons {
+    margin: 15px 0;
+  }
+  
+  .icons i {
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #000000;
+    border: solid thin #000000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1); /* configuracion de los lo*/
+  }
+  
+  .icons i:hover {
+    background-color: #c7c7f3;
+    color: #fff;
+  }
+  
+  .form {
+    margin: 30px 0 0 0;
+  }
+  
+  .form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
+  
+  .form label input {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffffaa;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #000000;
+  }
+  
+  .form label i {
+    color: #000000; /*color de iconos*/
+  }
+  
+  .form input[type="submit"] {
+    background-color: #ffffff00;
+    border-radius: 20px;
+    border: solid 2px #4a4848;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    color: #262627;
+  }
+  
+  .form input[type="submit"]:hover {
+    background-color:   #689ef6;/*color del boton con el puntero encima*/
+    border: none;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
+  
+  .hide {
+    position: absolute;
+    transform: translateY(-300%);
+  }
+  
+  /*PERSONALIZACION DE MIS ALERTAS Y MENSAJES */
+  .form div .alerta {
+    width: 290px;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+    color: rgb(235, 6, 6);
+  }
+  
+  .form > .alerta-error,
+  .form > .alerta-exito {
+    display: none;
+  }
+  
+  .form .alertaError {
+    display: block;
+    background-color: #ff00000e;
+    padding: .5rem 1rem;
+    color: red;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+  }
+  
+  .form .alertaExito {
+    display: block;
+    background-color: #00ff2f41;
+    padding: .5rem 1rem;
+    color: rgb(9, 58, 9);
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+  }
+  
+  .form .error {
+    outline: solid 2px #f20d0dac;
+  }
+  
+  /*RESPONSIVE FORM*/
+  
+  @media screen and (max-width:750px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width:580px) {
+    html {
+      font-size: 15px;
+    }
+  
+    .container-form {
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .information {
+      width: 100%;
+      padding: 20px;
+      border-top-left-radius: 20px;/*configurar el borde del cuadro 1 cuando se modifica el tamaño de la pantalla*/
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0;
+    }
+  
+    .form-information {
+      width: 100%;
+      padding: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 0;
+    }
+  }
+  
